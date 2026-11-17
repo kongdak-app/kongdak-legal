@@ -33,13 +33,13 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <h1>Privacy Policy</h1>
 <h2>At a glance</h2>
 <p>Kongdak has no server of ours, no account and no sign-up. Your settings and sleep records are kept on your iPhone, and we cannot see or receive them. The only information the app sends to anyone else is what the pass needs: your purchases, and the check that the pass is active. There are no ads and no tracking. The app has no analytics SDK and no crash-reporting SDK.</p>
-<p>Kongdak asks for no name, no birth date, no email and no photo. If you turn on "follow Mom's heart rate", the heart rate goes only from your Apple Watch to your own iPhone, and Kongdak keeps no history of it.</p>
+<p>Kongdak asks for no name, no birth date, no email and no photo. If you turn on "follow Mom's heart rate", the heart rate goes only from your Apple Watch to your own iPhone, and Kongdak keeps no history of it. If you turn on cry detection, the microphone is used only while the sound plays, and only on your iPhone: nothing is recorded, saved or sent.</p>
 <h2>What the information is used for</h2>
-<p>Information is used for two things only. On your phone, it runs the night light and keeps your sleep log. For the pass, it is used to check whether your pass is active. It is not used for anything else.</p>
+<p>Information is used for two things only. On your phone, it runs the night light (with cry detection, if you turn it on) and keeps your sleep log. For the pass, it is used to check whether your pass is active. It is not used for anything else.</p>
 <h2>What stays on your iPhone</h2>
-<p>Settings: the lamp color and size range, the row of sounds and the sounds you chose, the volumes, a tempo set by hand, the auto-off time, the bedtime reminder (on or off, and its time), the language, the widget background, and whether the first-time setup is finished.</p>
+<p>Settings: the lamp color and size range, the row of sounds and the sounds you chose, the volumes, a tempo set by hand, the auto-off time, the bedtime reminder (on or off, and its time), the language, the widget background, cry detection (on or off, and the sound, color and brightness a cry switches to), and whether the first-time setup is finished.</p>
 <p>Sleep records: when a sleep started and ended, the time-zone offset, whether it was a night or a nap, where it was started (app, widget or watch), and when the record was made or changed. A bedtime that is running is kept as its start time.</p>
-<p>A small shared state, so that the widgets, the Lock Screen card and your Apple Watch can show and control things: whether the sound is on and which sounds, the tempo, the lamp color, the start of a running bedtime, whether the pass is on (and when a monthly period ends), and this week's "moons" (which nights have a record; no times and no durations).</p>
+<p>A small shared state, so that the widgets, the Lock Screen card and your Apple Watch can show and control things: whether the sound is on and which sounds, the tempo, the lamp color, the start of a running bedtime, the cry detection choices, whether the pass is on (and when a monthly period ends), and this week's "moons" (which nights have a record; no times and no durations).</p>
 <p>All of this is stored in the app's own folder and the app's shared container (App Group) on this iPhone. iOS data protection keeps it encrypted until the phone has been unlocked once after a restart. We cannot see or receive any of it.</p>
 <h2>What leaves your iPhone</h2>
 <p>Only what the pass needs leaves the phone.</p>
@@ -51,7 +51,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <p>The device model, the iOS version, the app version and build, the app's bundle ID, the phone's preferred languages, and the App Store country.</p>
 <p>Your IP address. As with any internet connection, it is visible to RevenueCat's servers.</p>
 <p>What we can see: in RevenueCat's dashboard we see purchases by anonymous ID, country, product and dates. We cannot see who you are.</p>
-<p>Never sent to anyone: sleep records, heart rate, settings, contacts and location. Nothing is typed into Kongdak, so nothing typed is sent either. The app has no access to the advertising ID.</p>
+<p>Never sent to anyone: sleep records, heart rate, microphone sound, settings, contacts and location. Nothing is typed into Kongdak, so nothing typed is sent either. The app has no access to the advertising ID.</p>
 <p>We do not sell personal information, and we do not share it for advertising.</p>
 <h2>Service provider and transfer abroad</h2>
 <p>Who receives it: RevenueCat, Inc., United States. Privacy contact: compliance@revenuecat.com</p>
@@ -69,15 +69,21 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <p>When following stops, the light keeps the tempo it had at that moment as the current tempo, like a tempo set by hand. That is one number between 50 and 90.</p>
 <p>The session is discarded, so Kongdak saves no workout. Apple Watch itself may keep the heart-rate readings it measured during that time in the Health app, as it does with its own measurements. That data is yours, under Apple's Health settings.</p>
 <p>Health data is not used for advertising and is not sold. Kongdak does not store Health data in iCloud.</p>
+<h2>Cry detection (microphone)</h2>
+<p>Cry detection is off until you turn it on in Settings &gt; "Cry Detection Mode". iOS asks for the microphone permission then. If you say no, it stays off.</p>
+<p>While it is on and the sound is playing, the app listens through the iPhone's microphone and passes the sound, in memory only, to the sound classifier built into iOS, which runs on the iPhone itself. When it hears a baby crying, the app changes the sound, the lamp color and, if you chose one, the brightness.</p>
+<p>The microphone sound is not recorded, not saved to a file, not kept after it was checked, and not sent to us, to RevenueCat, to Apple or to anyone else. Only what a cry changed is kept: the new sound, color and brightness, as your settings.</p>
+<p>The microphone is used only while cry detection is on and the sound is playing. When the sound stops or you turn cry detection off, the microphone is off. While it is on, iOS shows its microphone indicator. You can also turn the microphone off for Kongdak in the iPhone's Settings.</p>
 <h2>Notifications and permissions</h2>
 <p>Notifications: there is one optional notification, a daily bedtime reminder at the time you set. Permission is asked only when you turn it on. It is scheduled on the phone. There is no push server.</p>
 <p>Health (heart rate, read) on the watch: asked only the first time you turn on following.</p>
-<p>Not used: camera, microphone, photos, location, contacts, Bluetooth permission, and tracking or the advertising ID.</p>
+<p>Microphone: asked only the first time you turn on cry detection.</p>
+<p>Not used: camera, photos, location, contacts, Bluetooth permission, and tracking or the advertising ID.</p>
 <p>The app plays audio in the background, with the screen locked, and shows a Live Activity. These need no permission dialog.</p>
 <h2>iPhone backups</h2>
 <p>If you have iPhone backups on (iCloud or a computer), they include this data. Backups belong to your own Apple Account or computer, and we cannot see them. A new iPhone gets the records back from a backup.</p>
 <h2>Keeping and deleting</h2>
-<p>Sleep records are kept for three weeks: the sleep log shows today and the 20 days before it, and anything older is erased by itself when you open the app or the sleep log. Settings are kept until you change them or delete the app.</p>
+<p>Sleep records are kept on your iPhone until you delete them. Settings are kept until you change them or delete the app.</p>
 <p>You can delete a record in the sleep log. You can undo for a few seconds. After that it is erased for good.</p>
 <p>You can delete every sleep record at once in Settings &gt; "Delete all sleep records". This cannot be undone.</p>
 <p>Erased records are overwritten in the app's database file, not just hidden.</p>
@@ -102,12 +108,13 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <h2>Cookies, advertising IDs and analytics</h2>
 <p>The app has no cookies, no advertising ID, and no analytics or tracking SDK. It has no crash-reporting SDK.</p>
 <h2>Changes</h2>
-<p>If this policy changes, we post the change on this page at least 7 days before it takes effect. If a change would send more information off your phone, we tell you first, and we ask for your consent where the law requires it.</p>
+<p>If this policy changes, we post the change on this page at least 7 days before it takes effect.</p>
+<p>Changes with app version 1.1, effective 17 November 2026: sleep records are no longer erased after three weeks; they stay until you delete them. And the new, optional cry detection uses the microphone on the phone only, as described under "Cry detection (microphone)". While you use version 1.0, the version of 16 November 2026 describes the app. If a change would send more information off your phone, we tell you first, and we ask for your consent where the law requires it.</p>
 <h2>Contact</h2>
 <p>Operator: signokorea</p>
 <p>Privacy officer: Hangyeol Choi (최한결)</p>
 <p>Privacy contact: signokorea.corp@gmail.com</p>
-<p>Effective date: 16 November 2026</p>
+<p>Effective date: 17 November 2026</p>
 </main>
 <footer>Kongdak is operated by signokorea. <a href="mailto:signokorea.corp@gmail.com">signokorea.corp@gmail.com</a></footer>
 </div>
